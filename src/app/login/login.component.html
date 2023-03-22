@@ -1,0 +1,18 @@
+<div>
+    <form #empform="ngForm" (submit)="login()">
+        <div>
+            Enter UserName:
+            <input type="text" #nameRef required [(ngModel)]="username" />
+        </div>
+    </form>
+</div>
+
+<!--
+    1. create an elementreference for the control
+    2. Declare a variable/property to refer the element reference variable in ts file
+    using @viewchild('nameRef') nameElementRef:ElementRef;
+    3. Our component should implement AfterViewInit interface and define the method
+    ngAfterViewInit()
+    4. this.nameElementRef.native.property to modify the control's property
+-->
+
